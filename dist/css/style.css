@@ -390,6 +390,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 .main__form-base {
@@ -398,6 +399,7 @@ img {
 }
 
 .main__form-second {
+  width: 48%;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
 }
@@ -504,6 +506,16 @@ img {
   padding: 30px;
   overflow: auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-header {
@@ -540,6 +552,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 .modal__form-base {

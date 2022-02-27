@@ -1,19 +1,19 @@
 import { Modal } from "./Modal";
-const modal = new Modal();
 export class MyApp {
   constructor() {
     this.equipments = {};
-    this.nextId = 1;
+    this._nextId = 1;
     this.addButton = {};
   }
-  //   get nextId() {
-  //     this.nextId++;
-  //     return this.nextId;
-  //   }
-  //   set nextId(id) {
-  //     this.nextId = id;
-  //  }
+  get nextId() {
+    this._nextId++;
+    return this._nextId;
+  }
+  set nextId(id) {
+    this._nextId = id;
+  }
   init() {
+    this.nextId = 1;
     this.addButton = document.getElementById("add-equipment");
     this.addButton.addEventListener("click", () => {
       this.addEquipment();

@@ -68,7 +68,7 @@
           <h2 class="modal-title">Техническое средство</h2>
           <button class="modal-close">x</button>
         </header>
-        <form class="modal__form" action="#">
+        <form class="modal__form" action="#" id="equipment-form">
           <div class="modal__form-base">
             <div class="modal__control">
               <label for="unit-name" class="modal__label">Наименование</label>
@@ -92,7 +92,6 @@
             </div>
             <div class="modal__control">
               <label for="unit-type" class="modal__label">Тип техники</label>
-
               <select name="unit-type" id="unit-type" class="modal__input">
                 <option value="" selected>(выберите тип)</option>
                 <option value="type-computer">Системный блок</option>
@@ -103,20 +102,29 @@
             </div>
           </div>
           <div class="modal__form-second">
-            <div class="modal__control">
-              <label for="unit-name" class="modal__label">Наименование</label>
+            <div class="modal__control" style="display: none">
+              <label for="unit-name" class="modal__label">Память (Гб)</label>
               <input type="text" class="modal__input" id="pc-memory" />
             </div>
-            <div class="modal__control">
-              <label for="unit-brand" class="modal__label">Бренд</label>
+            <div class="modal__control" style="display: none">
+              <label for="unit-brand" class="modal__label">Процессор</label>
               <input type="text" class="modal__input" id="pc-cpu" />
             </div>
-            <div class="modal__control">
-              <label for="unit-model" class="modal__label">Модель</label>
+            <div class="modal__control" style="display: none">
+              <label for="unit-model" class="modal__label">Жесткий диск</label>
               <input type="text" class="modal__input" id="pc-hdd" />
+            </div>
+            <div class="modal__control" style="display: none">
+              <label for="unit-name" class="modal__label">Диагональ</label>
+              <input type="text" class="modal__input" id="monitor-size" />
+            </div>
+            <div class="modal__control" style="display: none">
+              <label for="unit-brand" class="modal__label">Разрешение</label>
+              <input type="text" class="modal__input" id="monitor-resolution" />
             </div>
           </div>
         </form>
+        <input type="submit" form="equipment-form" value="Сохранить" class="modal__control" />
       </div>
     </div>
   </body>
