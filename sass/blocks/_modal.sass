@@ -1,0 +1,56 @@
+.overlay
+   display: none
+   //display: flex
+   justify-content: center
+   align-items: center
+   position: fixed
+   top: 0
+   bottom: 0
+   left: 0
+   right: 0
+   z-index: 999
+   background-color: rgba(0, 0, 0, 0.3)
+   &.show
+      display: flex
+
+.modal
+   background-color: #e0e0ff
+   min-width: 600px
+   max-height: 400px
+   padding: 30px
+   overflow: auto
+   position: relative
+   &-header
+      display: flex
+      justify-content: center
+   &-title
+      margin-top: 0
+      margin-bottom: 15px
+   &-close
+      cursor: pointer
+      position: absolute
+      background-color: transparent
+      right: 15px
+      top: 15px
+      font-size: 24px
+      border: none
+   &__form
+      padding: 20px
+      border: 1px solid #ddd
+      border-radius: 8px
+      display: flex
+      justify-content: space-between
+      &-base
+         flex-basis: 48%
+      &-second
+         flex-basis: 48%
+   &__control
+      padding: 5px
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__label
+      font-weight: bold
+      width: 40%
+   &__input
+      width: 59%

@@ -1,3 +1,5 @@
-import { App } from "./modules/App";
+import { MyApp } from "./modules/MyApp";
 
-console.log(new App());
+const app = new MyApp();
+
+app.init();
