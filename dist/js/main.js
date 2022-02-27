@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(new class{constructor(){this.equipments={},this.setNextId(1)}getNextId(){return this.nextId++}setNextId(t){this.nextId=t}})})();

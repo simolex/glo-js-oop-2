@@ -1,3 +1,5 @@
 .vscode
 css/style.css.map
 .htaccess
+/node_modules
+package-lock.json
