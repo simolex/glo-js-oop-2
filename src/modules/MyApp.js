@@ -18,6 +18,10 @@ export class MyApp {
     this.addButton.addEventListener("click", () => {
       this.addEquipment();
     });
+
+    // window.addEventListener("updatetable", (e) => {
+    //   console.log("update", e);
+    // });
   }
   _getModal() {
     if (!this.modal) {
