@@ -16,4 +16,12 @@ export class PrinterForm {
     this.printMedia.closest(".modal__control").style.display = "none";
     this.printColor.closest(".modal__control").style.display = "none";
   }
+  getObject(parentValue) {
+    return new Printer({
+      ...parentValue,
+      printTechnology: this.printTech.value,
+      mediaSize: this.printMedia.value,
+      printColor: this.printColor.checked,
+    });
+  }
 }

@@ -13,4 +13,11 @@ export class MonitorForm {
     this.monitorSize.closest(".modal__control").style.display = "none";
     this.monitorResolution.closest(".modal__control").style.display = "none";
   }
+  getObject(parentValue) {
+    return new Monitor({
+      ...parentValue,
+      monitorSize: this.monitorSize.value,
+      monitorResolution: this.monitorResolution.value,
+    });
+  }
 }

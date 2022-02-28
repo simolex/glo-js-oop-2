@@ -16,4 +16,12 @@ export class ComputerForm {
     this.pcCpu.closest(".modal__control").style.display = "none";
     this.pcHdd.closest(".modal__control").style.display = "none";
   }
+  getObject(parentValue) {
+    return new Computer({
+      ...parentValue,
+      pcMemory: this.pcMemory.value,
+      pcCpu: this.pcCpu.value,
+      pcHdd: this.pcHdd.value,
+    });
+  }
 }

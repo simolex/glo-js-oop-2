@@ -1,4 +1,6 @@
 import { Modal } from "./Modal";
+import { instanceTable } from "./MainTable";
+
 export class MyApp {
   constructor() {
     this.equipments = {};
@@ -18,10 +20,6 @@ export class MyApp {
     this.addButton.addEventListener("click", () => {
       this.addEquipment();
     });
-
-    // window.addEventListener("updatetable", (e) => {
-    //   console.log("update", e);
-    // });
   }
   _getModal() {
     if (!this.modal) {
