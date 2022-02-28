@@ -1,11 +1,11 @@
 import { ComputerForm } from "./ComputerForm";
 import { MonitorForm } from "./MonitorForm";
+import { PrinterForm } from "./PrinterForm";
 
 const selectList = {
   "type-computer": ComputerForm,
-  "type-printer": Object,
   "type-monitor": MonitorForm,
-  "type-scanner": Object,
+  "type-printer": PrinterForm,
 };
 export class Form {
   constructor() {

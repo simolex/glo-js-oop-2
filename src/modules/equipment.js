@@ -1,5 +1,5 @@
 export class Equipment {
-  constructor(nameEquip, brandEquip, modelEquip, numberEquip, dateEquip) {
+  constructor({ nameEquip, brandEquip, modelEquip, numberEquip, dateEquip }) {
     this.nameEquip = nameEquip;
     this.brandEquip = brandEquip;
     this.modelEquip = modelEquip;

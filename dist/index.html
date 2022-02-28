@@ -94,9 +94,8 @@
               <label for="unit-type" class="modal__label">Тип техники</label>
               <select name="unit-type" id="unit-type" class="modal__input">
                 <option value="type-computer" selected>Системный блок</option>
-                <option value="type-printer">Принтер</option>
                 <option value="type-monitor">Монитор</option>
-                <option value="type-scanner">Сканер</option>
+                <option value="type-printer">Принтер</option>
               </select>
             </div>
           </div>
@@ -120,6 +119,21 @@
             <div class="modal__control" style="display: none">
               <label for="unit-brand" class="modal__label">Разрешение</label>
               <input type="text" class="modal__input" id="monitor-resolution" />
+            </div>
+            <div class="modal__control" style="display: none">
+              <label for="unit-model" class="modal__label">Технология печати</label>
+              <select name="print-tech" id="print-tech" class="modal__input">
+                <option value="Лазерная" selected>Лазерная</option>
+                <option value="Струйная">Струйная</option>
+              </select>
+            </div>
+            <div class="modal__control" style="display: none">
+              <label for="unit-name" class="modal__label">Формат</label>
+              <input type="text" class="modal__input" id="print-media" />
+            </div>
+            <div class="modal__control" style="display: none">
+              <label for="unit-brand" class="modal__label">Цветная печать</label>
+              <input type="checkbox" class="modal__input" id="print-color" />
             </div>
           </div>
         </form>
