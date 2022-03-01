@@ -1,5 +1,4 @@
 import { Modal } from "./Modal";
-import { instanceTable } from "./MainTable";
 
 export class MyApp {
   constructor() {
@@ -17,6 +16,7 @@ export class MyApp {
   init() {
     this.nextId = 1;
     this.addButton = document.getElementById("add-equipment");
+
     this.addButton.addEventListener("click", () => {
       this.addEquipment();
     });

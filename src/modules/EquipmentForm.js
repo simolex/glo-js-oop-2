@@ -1,3 +1,4 @@
+import { instanceTable } from "./MainTable";
 import { ComputerForm } from "./ComputerForm";
 import { MonitorForm } from "./MonitorForm";
 import { PrinterForm } from "./PrinterForm";
@@ -43,6 +44,7 @@ export class EquipmentForm {
   init(parent) {
     this._formControl.addEventListener("submit", (e) => {
       e.preventDefault();
+      instanceTable.append(this.getObject());
       parent.hide();
     });
   }
