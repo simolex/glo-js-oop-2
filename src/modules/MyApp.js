@@ -14,7 +14,6 @@ export class MyApp {
     this._nextId = id;
   }
   init() {
-    this.nextId = 1;
     this.addButton = document.getElementById("add-equipment");
 
     this.addButton.addEventListener("click", () => {
