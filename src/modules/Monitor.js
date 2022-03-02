@@ -1,4 +1,4 @@
-import { Equipment } from "./equipment";
+import { Equipment } from "./Equipment";
 
 export class Monitor extends Equipment {
   constructor({
