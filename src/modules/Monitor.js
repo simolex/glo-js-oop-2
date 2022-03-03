@@ -28,4 +28,17 @@ export class Monitor extends Equipment {
   get monitorResolution() {
     return this._monitorResolution;
   }
+  toJSON() {
+    return {
+      nameEquip: this._nameEquip,
+      brandEquip: this._brandEquip,
+      modelEquip: this._modelEquip,
+      numberEquip: this._numberEquip,
+      dateEquip: this._dateEquip,
+      unitType: this._unitType,
+      unitTypeName: this._unitTypeName,
+      monitorSize: this._monitorSize,
+      monitorResolution: this._monitorResolution,
+    };
+  }
 }

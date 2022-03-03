@@ -36,4 +36,18 @@ export class Computer extends Equipment {
   get pcHdd() {
     return this._pcHdd;
   }
+  toJSON() {
+    return {
+      nameEquip: this._nameEquip,
+      brandEquip: this._brandEquip,
+      modelEquip: this._modelEquip,
+      numberEquip: this._numberEquip,
+      dateEquip: this._dateEquip,
+      unitType: this._unitType,
+      unitTypeName: this._unitTypeName,
+      pcMemory: this._pcMemory,
+      pcCpu: this._pcCpu,
+      pcHdd: this._pcHdd,
+    };
+  }
 }
