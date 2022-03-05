@@ -1,6 +1,6 @@
 import { Modal } from "./Modal";
 
-class TableController {
+export class TableController {
   constructor(model, view) {
     this._model = model;
     this._view = view;
