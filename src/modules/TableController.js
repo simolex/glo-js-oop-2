@@ -5,11 +5,9 @@ export class TableController {
     this._model = model;
     this._view = view;
 
-    //view.subscribe("listModified", (idx) => this.updateSelected(idx));
     view.subscribe("addButtonClicked", () => this.addItem());
     view.subscribe("delButtonClicked", (idx) => this.delItem(idx));
   }
-  _requestCreateItem() {}
   addItem() {
     const modal = new Modal();
     const modalRun = new Promise((resolve, reject) => modal.show(resolve, reject));

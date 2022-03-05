@@ -7,7 +7,6 @@ export class TableView extends EventEmitter {
     this._elements = elements;
     this._typeEquipments = [...elements.typeEquipments.options].reduce((types, option) => {
       if (!!option.value) {
-        //console.log(option.innerText);
         types[option.value] = option.innerText;
         return types;
       }
@@ -26,10 +25,7 @@ export class TableView extends EventEmitter {
       }
     });
 
-    //old
-    // elements.list.addEventListener("change", (e) => this.emit("listModified", e.target.selectedIndex));
     elements.addButton.addEventListener("click", () => this.emit("addButtonClicked"));
-    // elements.delButton.addEventListener("click", () => this.emit("delButtonClicked"));
   }
 
   show() {
