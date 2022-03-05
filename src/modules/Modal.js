@@ -1,5 +1,5 @@
 export class Modal {
-  constructor(typeId = "type-computer") {
+  constructor(typeId = "type_computer") {
     this._content = document.getElementById("modal-form");
     this._formControl = document.getElementById("equipment-form");
     this._unitType = document.getElementById("unit-type");

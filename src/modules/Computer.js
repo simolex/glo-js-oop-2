@@ -1,22 +1,11 @@
-import { Equipment } from "./equipment";
+import { Equipment } from "./Equipment";
 
 export class Computer extends Equipment {
-  constructor({
-    nameEquip,
-    brandEquip,
-    modelEquip,
-    numberEquip,
-    dateEquip,
-    unitType,
-    unitTypeName,
-    pcMemory,
-    pcCpu,
-    pcHdd,
-  }) {
-    super({ nameEquip, brandEquip, modelEquip, numberEquip, dateEquip, unitType, unitTypeName });
-    this._pcMemory = pcMemory;
-    this._pcCpu = pcCpu;
-    this._pcHdd = pcHdd;
+  constructor({ unitName, unitBrand, unitModel, unitNumber, unitDate, unitType, pcMemory, pcCpu, pcHdd }) {
+    super({ unitName, unitBrand, unitModel, unitNumber, unitDate, unitType });
+    this._pcMemory = pcMemory || "";
+    this._pcCpu = pcCpu || "";
+    this._pcHdd = pcHdd || "";
   }
   set pcMemory(pcMemory) {
     this._pcMemory = pcMemory;
@@ -38,13 +27,12 @@ export class Computer extends Equipment {
   }
   toJSON() {
     return {
-      nameEquip: this._nameEquip,
-      brandEquip: this._brandEquip,
-      modelEquip: this._modelEquip,
-      numberEquip: this._numberEquip,
-      dateEquip: this._dateEquip,
+      unitName: this._unitName,
+      unitBrand: this._unitBrand,
+      unitModel: this._unitModel,
+      unitNumber: this._unitNumber,
+      unitDate: this._unitDate,
       unitType: this._unitType,
-      unitTypeName: this._unitTypeName,
       pcMemory: this._pcMemory,
       pcCpu: this._pcCpu,
       pcHdd: this._pcHdd,

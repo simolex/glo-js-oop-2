@@ -93,14 +93,14 @@
             <div class="modal__control">
               <label for="unit-type" class="modal__label">Тип техники</label>
               <select name="unit-type" id="unit-type" class="modal__input">
-                <option value="type-computer" selected>Системный блок</option>
-                <option value="type-monitor">Монитор</option>
-                <option value="type-printer">Принтер</option>
+                <option value="type_computer" selected>Системный блок</option>
+                <option value="type_monitor">Монитор</option>
+                <option value="type_printer">Принтер</option>
               </select>
             </div>
           </div>
           <div class="modal__form-second">
-            <div class="modal__subtype" id="type-computer" style="display: none">
+            <div class="modal__subtype" id="type_computer" style="display: none">
               <div class="modal__control">
                 <label for="unit-name" class="modal__label">Память(Гб)</label>
                 <input type="text" class="modal__input" id="pc-memory" name="pc-memory" />
@@ -114,22 +114,17 @@
                 <input type="text" class="modal__input" id="pc-hdd" name="pc-hdd" />
               </div>
             </div>
-            <div class="modal__subtype" id="type-monitor" style="display: none">
+            <div class="modal__subtype" id="type_monitor" style="display: none">
               <div class="modal__control">
                 <label for="unit-name" class="modal__label">Диагональ</label>
                 <input type="text" class="modal__input" id="monitor-size" name="monitor-size" />
               </div>
               <div class="modal__control">
                 <label for="monitor-resolution" class="modal__label">Разрешение</label>
-                <input
-                  type="text"
-                  class="modal__input"
-                  id="monitor-resolution"
-                  name="monitor-resolution"
-                />
+                <input type="text" class="modal__input" id="monitor-resolution" name="monitor-resolution" />
               </div>
             </div>
-            <div class="modal__subtype" id="type-printer" style="display: none">
+            <div class="modal__subtype" id="type_printer" style="display: none">
               <div class="modal__control">
                 <label for="print-tech" class="modal__label">Технология печати</label>
                 <select name="print-tech" id="print-tech" class="modal__input">

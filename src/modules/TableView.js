@@ -5,11 +5,16 @@ export class TableView extends EventEmitter {
     super();
     this._model = model;
     this._elements = elements;
+    this._typeEquipments = [...elements.typeEquipments.options].reduce((types, option) => {
+      if (!!option.value) {
+        //console.log(option.innerText);
+        types[option.value] = option.innerText;
+        return types;
+      }
+    }, []);
 
     // attach model listeners
-    model
-      .subscribe("itemAdded", () => this.rebuildTable())
-      .subscribe("itemRemoved", () => this.rebuildTable());
+    model.subscribe("rowAdded", () => this.rebuildTable()).subscribe("rowRemoved", () => this.rebuildTable());
 
     // attach listeners to HTML controls
     elements.tableBody.addEventListener("click", (e) => {
@@ -38,12 +43,12 @@ export class TableView extends EventEmitter {
       tr.classList.add("table__row");
       tr.id = index;
       tr.innerHTML = `
-                <td class="table__cell">${row.nameEquip}</td>
-                <td class="table__cell">${row.brandEquip}</td>
-                <td class="table__cell">${row.modelEquip}</td>
-                <td class="table__cell">${row.numberEquip}</td>
-                <td class="table__cell">${row.dateEquip}</td>
-                <td class="table__cell">${row.unitTypeName}</td>
+                <td class="table__cell">${row.unitName}</td>
+                <td class="table__cell">${row.unitBrand}</td>
+                <td class="table__cell">${row.unitModel}</td>
+                <td class="table__cell">${row.unitNumber}</td>
+                <td class="table__cell">${row.unitDate}</td>
+                <td class="table__cell">${this._typeEquipments[row.unitType]}</td>
                 <th class="table__title">
                   <div class="table__button remove">
                     <img class="table__img" src="img/trash-can.svg" alt="" />

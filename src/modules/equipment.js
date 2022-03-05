@@ -1,50 +1,41 @@
 export class Equipment {
-  constructor({
-    nameEquip,
-    brandEquip,
-    modelEquip,
-    numberEquip,
-    dateEquip,
-    unitType,
-    unitTypeName,
-  }) {
-    this._nameEquip = nameEquip;
-    this._brandEquip = brandEquip;
-    this._modelEquip = modelEquip;
-    this._numberEquip = numberEquip;
-    this._dateEquip = dateEquip;
+  constructor({ unitName, unitBrand, unitModel, unitNumber, unitDate, unitType }) {
+    this._unitName = unitName;
+    this._unitBrand = unitBrand;
+    this._unitModel = unitModel;
+    this._unitNumber = unitNumber;
+    this._unitDate = unitDate;
     this._unitType = unitType;
-    this._unitTypeName = unitTypeName;
   }
-  set nameEquip(nameEquip) {
-    this._nameEquip = nameEquip;
+  set unitName(unitName) {
+    this._unitName = unitName;
   }
-  get nameEquip() {
-    return this._nameEquip;
+  get unitName() {
+    return this._unitName;
   }
-  set brandEquip(brandEquip) {
-    this._brandEquip = brandEquip;
+  set unitBrand(unitBrand) {
+    this._unitBrand = unitBrand;
   }
-  get brandEquip() {
-    return this._brandEquip;
+  get unitBrand() {
+    return this._unitBrand;
   }
-  set modelEquip(modelEquip) {
-    this._modelEquip = modelEquip;
+  set unitModel(unitModel) {
+    this._unitModel = unitModel;
   }
-  get modelEquip() {
-    return this._modelEquip;
+  get unitModel() {
+    return this._unitModel;
   }
-  set numberEquip(numberEquip) {
-    this._numberEquip = numberEquip;
+  set unitNumber(unitNumber) {
+    this._unitNumber = unitNumber;
   }
-  get numberEquip() {
-    return this._numberEquip;
+  get unitNumber() {
+    return this._unitNumber;
   }
-  set dateEquip(dateEquip) {
-    this._dateEquip = dateEquip;
+  set unitDate(unitDate) {
+    this._unitDate = unitDate;
   }
-  get dateEquip() {
-    return this._dateEquip;
+  get unitDate() {
+    return this._unitDate;
   }
   set unitType(unitType) {
     this._unitType = unitType;
@@ -52,30 +43,15 @@ export class Equipment {
   get unitType() {
     return this._unitType;
   }
-  set unitTypeName(unitTypeName) {
-    this._unitTypeName = unitTypeName;
-  }
-  get unitTypeName() {
-    return this._unitTypeName;
-  }
-  addSubscriber(view) {
-    this.subcribers.push(view);
-  }
-  update() {
-    this.subcribers.forEach((subscriber) => {
-      subscriber.update(this._getData());
-    });
-  }
 
-  _getData() {
+  toJSON() {
     return {
-      nameEquip: this.nameEquip,
-      brandEquip: this.brandEquip,
-      modelEquip: this.modelEquip,
-      numberEquip: this.numberEquip,
-      dateEquip: this.dateEquip,
-      unitType: this.unitType,
-      unitTypeName: this.unitTypeName,
+      nameEquip: this._nameEquip,
+      brandEquip: this._brandEquip,
+      modelEquip: this._modelEquip,
+      numberEquip: this._numberEquip,
+      dateEquip: this._dateEquip,
+      unitType: this._unitType,
     };
   }
 }

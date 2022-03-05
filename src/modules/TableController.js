@@ -26,7 +26,6 @@ export class TableController {
                 }
                 return camelCase + chunk;
               }, "");
-              console.log(property);
               obj[property] = inputValue[1];
               return obj;
             }

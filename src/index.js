@@ -10,6 +10,7 @@ import { TableController } from "./modules/TableController";
 
 const model = new TableModel(),
   view = new TableView(model, {
+    typeEquipments: document.getElementById("unit-type"),
     tableBody: document.querySelector(".main__table tbody"),
     addButton: document.getElementById("add-equipment"),
     //delButton: document.getElementById("minusBtn"),
