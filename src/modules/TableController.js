@@ -38,10 +38,7 @@ export class TableController {
       });
   }
 
-  delItem() {
-    const index = this._model.selectedIndex;
-    if (index !== -1) {
-      this._model.removeItemAt(index);
-    }
+  delItem(id) {
+    this._model.removeRow(id);
   }
 }

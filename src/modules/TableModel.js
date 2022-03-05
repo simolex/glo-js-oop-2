@@ -42,6 +42,7 @@ export class TableModel extends EventEmitter {
 
   removeRow(id) {
     const row = this._rowList.splice(id, 1)[0];
+    localStorage.setItem("equipments", JSON.stringify(this._rowList));
     this.emit("rowRemoved", row);
 
     // if (index === this._selectedIndex) {
