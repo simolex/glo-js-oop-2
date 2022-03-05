@@ -1,4 +1,4 @@
-import { Equipment } from "./Equipment";
+import { Equipment } from "./equipment";
 
 export class Printer extends Equipment {
   constructor({
@@ -35,5 +35,19 @@ export class Printer extends Equipment {
   }
   get printColor() {
     return this._printColor;
+  }
+  toJSON() {
+    return {
+      nameEquip: this._nameEquip,
+      brandEquip: this._brandEquip,
+      modelEquip: this._modelEquip,
+      numberEquip: this._numberEquip,
+      dateEquip: this._dateEquip,
+      unitType: this._unitType,
+      unitTypeName: this._unitTypeName,
+      printTechnology: this._printTechnology,
+      mediaSize: this._mediaSize,
+      printColor: this._printColor,
+    };
   }
 }

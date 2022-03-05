@@ -72,23 +72,23 @@
           <div class="modal__form-base">
             <div class="modal__control">
               <label for="unit-name" class="modal__label">Наименование</label>
-              <input type="text" class="modal__input" id="unit-name" />
+              <input type="text" class="modal__input" id="unit-name" name="unit-name" />
             </div>
             <div class="modal__control">
               <label for="unit-brand" class="modal__label">Бренд</label>
-              <input type="text" class="modal__input" id="unit-brand" />
+              <input type="text" class="modal__input" id="unit-brand" name="unit-brand" />
             </div>
             <div class="modal__control">
               <label for="unit-model" class="modal__label">Модель</label>
-              <input type="text" class="modal__input" id="unit-model" />
+              <input type="text" class="modal__input" id="unit-model" name="unit-model" />
             </div>
             <div class="modal__control">
               <label for="unit-number" class="modal__label">Учетный номер</label>
-              <input type="text" class="modal__input" id="unit-number" />
+              <input type="text" class="modal__input" id="unit-number" name="unit-number" />
             </div>
             <div class="modal__control">
               <label for="unit-date" class="modal__label">Дата учета</label>
-              <input type="date" class="modal__input" id="unit-date" />
+              <input type="date" class="modal__input" id="unit-date" name="unit-date" />
             </div>
             <div class="modal__control">
               <label for="unit-type" class="modal__label">Тип техники</label>
@@ -100,40 +100,51 @@
             </div>
           </div>
           <div class="modal__form-second">
-            <div class="modal__control" style="display: none">
-              <label for="unit-name" class="modal__label">Память(Гб)</label>
-              <input type="text" class="modal__input" id="pc-memory" />
+            <div class="modal__subtype" id="type-computer" style="display: none">
+              <div class="modal__control">
+                <label for="unit-name" class="modal__label">Память(Гб)</label>
+                <input type="text" class="modal__input" id="pc-memory" name="pc-memory" />
+              </div>
+              <div class="modal__control">
+                <label for="unit-brand" class="modal__label">Процессор</label>
+                <input type="text" class="modal__input" id="pc-cpu" name="pc-cpu" />
+              </div>
+              <div class="modal__control">
+                <label for="unit-model" class="modal__label">Жесткий диск(Тб)</label>
+                <input type="text" class="modal__input" id="pc-hdd" name="pc-hdd" />
+              </div>
             </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-brand" class="modal__label">Процессор</label>
-              <input type="text" class="modal__input" id="pc-cpu" />
+            <div class="modal__subtype" id="type-monitor" style="display: none">
+              <div class="modal__control">
+                <label for="unit-name" class="modal__label">Диагональ</label>
+                <input type="text" class="modal__input" id="monitor-size" name="monitor-size" />
+              </div>
+              <div class="modal__control">
+                <label for="monitor-resolution" class="modal__label">Разрешение</label>
+                <input
+                  type="text"
+                  class="modal__input"
+                  id="monitor-resolution"
+                  name="monitor-resolution"
+                />
+              </div>
             </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-model" class="modal__label">Жесткий диск(Тб)</label>
-              <input type="text" class="modal__input" id="pc-hdd" />
-            </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-name" class="modal__label">Диагональ</label>
-              <input type="text" class="modal__input" id="monitor-size" />
-            </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-brand" class="modal__label">Разрешение</label>
-              <input type="text" class="modal__input" id="monitor-resolution" />
-            </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-model" class="modal__label">Технология печати</label>
-              <select name="print-tech" id="print-tech" class="modal__input">
-                <option value="Лазерная" selected>Лазерная</option>
-                <option value="Струйная">Струйная</option>
-              </select>
-            </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-name" class="modal__label">Формат</label>
-              <input type="text" class="modal__input" id="print-media" />
-            </div>
-            <div class="modal__control" style="display: none">
-              <label for="unit-brand" class="modal__label">Цветная печать</label>
-              <input type="checkbox" class="modal__input" id="print-color" />
+            <div class="modal__subtype" id="type-printer" style="display: none">
+              <div class="modal__control">
+                <label for="print-tech" class="modal__label">Технология печати</label>
+                <select name="print-tech" id="print-tech" class="modal__input">
+                  <option value="Лазерная" selected>Лазерная</option>
+                  <option value="Струйная">Струйная</option>
+                </select>
+              </div>
+              <div class="modal__control">
+                <label for="print-media" class="modal__label">Формат</label>
+                <input type="text" class="modal__input" id="print-media" name="print-media" />
+              </div>
+              <div class="modal__control">
+                <label for="print-color" class="modal__label">Цветная печать</label>
+                <input type="checkbox" class="modal__input" id="print-color" name="print-color" />
+              </div>
             </div>
           </div>
         </form>

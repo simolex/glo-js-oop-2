@@ -1,4 +1,5 @@
 import { EventEmitter } from "./EventEmitter";
+import { Equipment } from "./equipment";
 
 export class TableModel extends EventEmitter {
   constructor(rows) {
@@ -9,8 +10,12 @@ export class TableModel extends EventEmitter {
   getRows() {
     return this._rowList.slice();
   }
-  addRow(row) {
+  addRow(rowObj) {
+    console.log(rowObj);
+    const row = new Equipment(rowObj);
+    console.log(row);
     this._rowList.push(row);
+    console.log(this._rowList);
     this.emit("rowAdded", row);
   }
 

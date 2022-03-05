@@ -1,4 +1,4 @@
-import { instanceTable } from "./MainTable";
+//import { instanceTable } from "./MainTable";
 import { ComputerForm } from "./ComputerForm";
 import { MonitorForm } from "./MonitorForm";
 import { PrinterForm } from "./PrinterForm";
@@ -16,7 +16,6 @@ export class EquipmentForm {
     this.modelEquip = document.getElementById("unit-model");
     this.numberEquip = document.getElementById("unit-number");
     this.dateEquip = document.getElementById("unit-date");
-    this.unitType = document.getElementById("unit-type");
 
     this._secondForms = {};
     this._formControl = document.getElementById("equipment-form");
@@ -41,13 +40,7 @@ export class EquipmentForm {
     this._secondForms[type].show();
   }
 
-  init(parent) {
-    this._formControl.addEventListener("submit", (e) => {
-      e.preventDefault();
-      instanceTable.append(this.getObject());
-      parent.hide();
-    });
-  }
+  init(parent) {}
 
   getObject() {
     return this._secondForms[this.unitType.value].getObject({

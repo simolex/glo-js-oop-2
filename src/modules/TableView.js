@@ -7,7 +7,9 @@ export class TableView extends EventEmitter {
     this._elements = elements;
 
     // attach model listeners
-    model.subscribe("itemAdded", () => this.rebuildTable()).subscribe("itemRemoved", () => this.rebuildTable());
+    model
+      .subscribe("itemAdded", () => this.rebuildTable())
+      .subscribe("itemRemoved", () => this.rebuildTable());
 
     // attach listeners to HTML controls
     elements.tableBody.addEventListener("click", (e) => {
@@ -21,7 +23,7 @@ export class TableView extends EventEmitter {
 
     //old
     // elements.list.addEventListener("change", (e) => this.emit("listModified", e.target.selectedIndex));
-    // elements.addButton.addEventListener("click", () => this.emit("addButtonClicked"));
+    elements.addButton.addEventListener("click", () => this.emit("addButtonClicked"));
     // elements.delButton.addEventListener("click", () => this.emit("delButtonClicked"));
   }
 
