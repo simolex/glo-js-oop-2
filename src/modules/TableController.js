@@ -1,3 +1,5 @@
+import { Modal } from "./Modal";
+
 class TableController {
   constructor(model, view) {
     this._model = model;
@@ -7,14 +9,17 @@ class TableController {
     view.subscribe("addButtonClicked", () => this.addItem());
     view.subscribe("delButtonClicked", (idx) => this.delItem(idx));
   }
-
+  _requestCreateItem() {}
   addItem() {
     //const item = window.prompt("Add item:", "");
-    const row = ModalForm.get();
 
-    if (row) {
-      this._model.addItem(row);
-    }
+    // const row = ModalForm.get();
+
+    // if (row) {
+    //   this._model.addItem(row);
+    // }
+    const modal = new Modal();
+    const modalRun = Promise(modal.show);
   }
 
   delItem() {

@@ -15,7 +15,11 @@ export class Modal {
       this.hide();
     });
   }
-  show() {
+  show(onSave, onError) {
+    this._onSave = onSave;
+    this._onError = onError;
+    console.log(onSave, onError);
+
     this.content.style.display = "flex";
   }
   hide() {
