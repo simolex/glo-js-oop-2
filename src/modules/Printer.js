@@ -1,22 +1,21 @@
-import { Equipment } from "./equipment";
+import { Equipment } from "./Equipment";
 
 export class Printer extends Equipment {
   constructor({
-    nameEquip,
-    brandEquip,
-    modelEquip,
-    numberEquip,
-    dateEquip,
+    unitName,
+    unitBrand,
+    unitModel,
+    unitNumber,
+    unitDate,
     unitType,
-    unitTypeName,
     printTechnology,
     mediaSize,
     printColor,
   }) {
-    super({ nameEquip, brandEquip, modelEquip, numberEquip, dateEquip, unitType, unitTypeName });
-    this._printTechnology = printTechnology;
-    this._mediaSize = mediaSize;
-    this._printColor = printColor;
+    super({ unitName, unitBrand, unitModel, unitNumber, unitDate, unitType });
+    this._printTechnology = printTechnology || "";
+    this._mediaSize = mediaSize || "";
+    this._printColor = printColor || "";
   }
   set printTechnology(printTechnology) {
     this._printTechnology = printTechnology;
@@ -38,13 +37,12 @@ export class Printer extends Equipment {
   }
   toJSON() {
     return {
-      nameEquip: this._nameEquip,
-      brandEquip: this._brandEquip,
-      modelEquip: this._modelEquip,
-      numberEquip: this._numberEquip,
-      dateEquip: this._dateEquip,
+      unitName: this._unitName,
+      unitBrand: this._unitBrand,
+      unitModel: this._unitModel,
+      unitNumber: this._unitNumber,
+      unitDate: this._unitDate,
       unitType: this._unitType,
-      unitTypeName: this._unitTypeName,
       printTechnology: this._printTechnology,
       mediaSize: this._mediaSize,
       printColor: this._printColor,

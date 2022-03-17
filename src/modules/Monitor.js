@@ -1,21 +1,21 @@
-import { Equipment } from "./equipment";
+import { Equipment } from "./Equipment";
 
 export class Monitor extends Equipment {
   constructor({
-    nameEquip,
-    brandEquip,
-    modelEquip,
-    numberEquip,
-    dateEquip,
+    unitName,
+    unitBrand,
+    unitModel,
+    unitNumber,
+    unitDate,
     unitType,
-    unitTypeName,
     monitorSize,
     monitorResolution,
   }) {
-    super({ nameEquip, brandEquip, modelEquip, numberEquip, dateEquip, unitType, unitTypeName });
-    this._monitorSize = monitorSize;
-    this._monitorResolution = monitorResolution;
+    super({ unitName, unitBrand, unitModel, unitNumber, unitDate, unitType });
+    this._monitorSize = monitorSize || "";
+    this._monitorResolution = monitorResolution || "";
   }
+
   set monitorSize(monitorSize) {
     this._monitorSize = monitorSize;
   }
@@ -28,15 +28,15 @@ export class Monitor extends Equipment {
   get monitorResolution() {
     return this._monitorResolution;
   }
+
   toJSON() {
     return {
-      nameEquip: this._nameEquip,
-      brandEquip: this._brandEquip,
-      modelEquip: this._modelEquip,
-      numberEquip: this._numberEquip,
-      dateEquip: this._dateEquip,
+      unitName: this._unitName,
+      unitBrand: this._unitBrand,
+      unitModel: this._unitModel,
+      unitNumber: this._unitNumber,
+      unitDate: this._unitDate,
       unitType: this._unitType,
-      unitTypeName: this._unitTypeName,
       monitorSize: this._monitorSize,
       monitorResolution: this._monitorResolution,
     };
